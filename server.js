@@ -94,5 +94,5 @@ app.delete('/api/invoices/:id', async (req, res) => {
   await Invoice.findByIdAndDelete(req.params.id);
   res.json({ message: 'تم الحذف' });
 });
-
-app.listen(5000, () => console.log('السيرفر شغال على بورت 5000 🚀'));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log('السيرفر شغال على بورت 5000 🚀'));
