@@ -44,9 +44,7 @@ app.post('/api/auth/login', async (req, res) => {
   let user = await User.findOne({ username });
   if (!user) {
     // لو المستخدم مش موجود، هنعمله حساب جديد مؤقتاً للتسهيل
-    user = new User({ username, password });
-    await user.save();
-    return res.json({ message: 'تم إنشاء حساب جديد وتسجيل الدخول', userId: user._id });
+    res.status(401).json({ error: 'هذا المستخدم غير موجود' });
   }
   if (user.password === password) {
     res.json({ message: 'تم تسجيل الدخول بنجاح', userId: user._id });
