@@ -1,0 +1,16 @@
+**/node_modules
+**/dist
+**/.env
+**/.env.*
+**/.git
+**/test-results
+**/playwright-report
+**/*.log
+**/*.pem
+**/*.key
+app
+.codex
+.agents
+tmp
+output
+website/tests

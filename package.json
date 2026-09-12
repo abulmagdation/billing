@@ -1,0 +1,13 @@
+{
+  "name": "retalcare-project",
+  "private": true,
+  "scripts": {
+    "start": "npm --prefix website start",
+    "dev": "npm --prefix website run dev",
+    "website": "npm --prefix website run dev",
+    "server": "npm --prefix server start",
+    "app": "npm --prefix app start",
+    "build": "npm --prefix website run build",
+    "test": "npm --prefix website test"
+  }
+}
